@@ -21,7 +21,7 @@ router.post('/users', (ctx: Context, next: Function) => {
     const newUser = { _id: 1, ...payloadUser }
     
     ctx.body = newUser;
-})
+});
 
 server.use(koaBody());
 server.use(router.routes());
